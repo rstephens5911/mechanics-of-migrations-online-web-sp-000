@@ -6,7 +6,4 @@ task :console do
   ARGV.clear
   IRB.start
 
-  task :create_table do
-    01_create_artists.change
-  end
 end
