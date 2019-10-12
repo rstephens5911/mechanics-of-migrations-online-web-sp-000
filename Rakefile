@@ -6,4 +6,11 @@ task :console do
   ARGV.clear
   IRB.start
 
+  namespace :db do
+    desc 'migrate database changes'
+    task :migrate => environment do
+      CreateArtists.change
+    end
+  end
+
 end
